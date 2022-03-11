@@ -25,7 +25,7 @@ function shuffle(array) {
 	var categoryId= $(" #category_id ").val();
 	var page=$("#page").val();
 	a2 = $.ajax({
-		url: 'http://web_tu_lam.khaiho.io/api/list_question_width_category/' + categoryId + '/'+ page,
+		url: 'https://obscure-springs-06876.herokuapp.com//api/list_question_width_category/' + categoryId + '/'+ page,
 		type: 'GET',
 		dataType: 'json', // added data type
 	}).then(function (res) {
@@ -170,9 +170,9 @@ function shuffle(array) {
 							table += '</tbody></table></div><div class=\"col-2\"></div></div>\n';
 							$("#result").html('<div style="background:aliceblue" ><div class="row"><div class="col-12" style="text-align: center"><h1 style="color: yellowgreen">Bạn đã trả lời đúng ' + count_key_true + '/ ' + new_data.length + ' câu </h1></div><div class="col-12"><div class="row"><div class="col-2"></div><div style="text-align: center" class="col-4"><lable style="text-align: center;font-size: 40px;color: #0f9e60">' + count_key_true + '</lable><i style="color: #0f9e60 ; font-size: 36px" class="far fa-check-circle"></i></div><div style="text-align: center" class="col-4"><lable style="text-align: center;font-size: 40px;color: orangered">' + count_key_false + '</lable><i style="color: red;font-size: 36px" class="far fa-check-circle"></i></div><div class="col-2"></div></div></div></div></div>\n');
 							$("#end").html(table);
-							$("#scores").html('<div class="row"><div class="col-2"></div><div style="text-align: center" class="col-8"><h1>Điểm của bạn : ' + scores + ' </h1><h1><a href="http://web_tu_lam.khaiho.io/QuestionGame/">Chơi lại</a></h1></div><div class="col-2"></div></div>\n');
+							$("#scores").html('<div class="row"><div class="col-2"></div><div style="text-align: center" class="col-8"><h1>Điểm của bạn : ' + scores + ' </h1><h1><a href="https://obscure-springs-06876.herokuapp.com//QuestionGame/">Chơi lại</a></h1></div><div class="col-2"></div></div>\n');
 							$.ajax({
-								url: 'http://web_tu_lam.khaiho.io/api/list_page_question/'+categoryId,
+								url: 'https://obscure-springs-06876.herokuapp.com//api/list_page_question/'+categoryId,
 								type: 'GET',
 								dataType: 'json', // added data type
 							}).then(function (res) {
@@ -180,7 +180,7 @@ function shuffle(array) {
 								var total_page = res.total_page;
 								var str = '';
 								for (var i = 1 ; i <= total_page ; i ++){
-									str += '<li class="page-item"><a href="http://web_tu_lam.khaiho.io/QuestionGame/'+res.slug_category+'?page='+i+'" class="page-link">'+i+'</a></li>';
+									str += '<li class="page-item"><a href="https://obscure-springs-06876.herokuapp.com//QuestionGame/'+res.slug_category+'?page='+i+'" class="page-link">'+i+'</a></li>';
 								}
 								$(" #list_paginate ").html(str);
 

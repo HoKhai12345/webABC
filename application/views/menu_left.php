@@ -29,7 +29,7 @@
 	if (localStorage.getItem('menuSub') == null) {
 		const id_category = $("#id_category").val();
 		$.ajax({
-			url: 'http://web_tu_lam.khaiho.io/subCate/'+id_category,
+			url: 'https://obscure-springs-06876.herokuapp.com//subCate/'+id_category,
 			type: 'GET',
 		}).then(function (result) {
 			$("#sub_category").html(result);

@@ -25,7 +25,7 @@
 <script>
 	var id_cate = $(" #category_id ").val();
 	$.ajax({
-		url: 'http://web_tu_lam.khaiho.io/api/list_page_question/'+id_cate,
+		url: 'https://obscure-springs-06876.herokuapp.com//api/list_page_question/'+id_cate,
 		type: 'GET',
 		dataType: 'json', // added data type
 	}).then(function (res) {
@@ -33,7 +33,7 @@
 		var total_page = res.total_page;
 		var str = '';
 		for (var i = 1 ; i <= total_page ; i ++){
-			str += '<li class="page-item"><a href="http://web_tu_lam.khaiho.io/QuestionGame/'+res.slug_category+'?page='+i+'" class="page-link">'+i+'</a></li>';
+			str += '<li class="page-item"><a href="https://obscure-springs-06876.herokuapp.com//QuestionGame/'+res.slug_category+'?page='+i+'" class="page-link">'+i+'</a></li>';
 		}
 		$(" #list_page ").html(str);
 

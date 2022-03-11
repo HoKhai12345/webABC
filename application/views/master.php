@@ -1058,7 +1058,7 @@
 <script>
 	if (localStorage.getItem('menuLeft') == null ){
 			$.ajax({
-				url: 'http://web_tu_lam.khaiho.io/menuleft',
+				url: 'https://obscure-springs-06876.herokuapp.com//menuleft',
 				type: 'GET',
 			}).then(function (result) {
 				$("#menu_view").html(result);

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://web_tu_lam.khaiho.io/';
+$config['base_url'] = 'https://obscure-springs-06876.herokuapp.com//';
 
 /*
 |--------------------------------------------------------------------------
